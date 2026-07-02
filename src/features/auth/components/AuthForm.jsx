@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import GoogleButton from "./GoogleButton";
 
 export default function AuthForm() {
+  const navigate = useNavigate();
+
   const [mode, setMode] = useState("login"); // login | register
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -10,9 +13,17 @@ export default function AuthForm() {
     e.preventDefault();
 
     if (mode === "login") {
+      // Giả lập đăng nhập thành công
       console.log("LOGIN:", { email, password });
+
+      // Chuyển sang trang chính
+      navigate("/app");
     } else {
+      // Giả lập đăng ký thành công
       console.log("REGISTER:", { email, password });
+
+      // Sau này có thể chuyển về login hoặc tự động đăng nhập
+      alert("Đăng ký thành công (giả lập)");
     }
   };
 
@@ -28,6 +39,7 @@ export default function AuthForm() {
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
 
         <input
@@ -35,6 +47,7 @@ export default function AuthForm() {
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          required
         />
 
         <button type="submit">
@@ -43,9 +56,15 @@ export default function AuthForm() {
       </form>
 
       <p className="switch">
-        {mode === "login" ? "No account?" : "Already have account?"}{" "}
-        <span onClick={() => setMode(mode === "login" ? "register" : "login")}>
-          Click here
+        {mode === "login"
+          ? "No account?"
+          : "Already have an account?"}{" "}
+        <span
+          onClick={() =>
+            setMode(mode === "login" ? "register" : "login")
+          }
+        >
+          {mode === "login" ? "Create one" : "Login"}
         </span>
       </p>
     </div>

@@ -1,15 +1,16 @@
 import { Routes, Route, Navigate } from "react-router-dom";
+
 import LoginPage from "../features/auth/pages/LoginPage";
+import { CrawlerPage } from "../features/crawler";
 
 export default function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<LoginPage />} />
 
-      {/* future crawler area */}
-      <Route path="/app" element={<div>App Shell (crawler later)</div>} />
+      <Route path="/app" element={<CrawlerPage />} />
 
-      <Route path="*" element={<Navigate to="/" />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 }
