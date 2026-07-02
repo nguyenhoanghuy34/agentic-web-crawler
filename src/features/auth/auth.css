@@ -1,0 +1,211 @@
+/* ===========================
+   LOGIN PAGE
+=========================== */
+
+.login-page {
+    width: 100%;
+    height: 100vh;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: relative;
+}
+
+/* Lớp phủ tối để card nổi bật hơn */
+.login-overlay {
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+/* ===========================
+   GLASS CARD
+=========================== */
+
+.glass-card {
+    width: 420px;
+    max-width: 100%;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.login-title {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.login-subtitle {
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 30px;
+}
+
+/* ===========================
+   AUTH FORM
+=========================== */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form input {
+    padding: 14px 16px;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    background: rgba(255, 255, 255, 0.12);
+
+    color: white;
+
+    outline: none;
+
+    transition: 0.25s;
+}
+
+.form input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.form input:focus {
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.form button {
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #3b82f6;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.form button:hover {
+    background: #2563eb;
+}
+
+/* ===========================
+   GOOGLE BUTTON
+=========================== */
+
+.google-btn {
+    width: 100%;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    background: rgba(255, 255, 255, 0.12);
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.google-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* ===========================
+   DIVIDER
+=========================== */
+
+.divider {
+    margin: 24px 0;
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* ===========================
+   SWITCH LOGIN / REGISTER
+=========================== */
+
+.switch {
+    margin-top: 20px;
+
+    text-align: center;
+
+    color: white;
+}
+
+.switch span {
+    color: #7dd3fc;
+
+    cursor: pointer;
+}
+
+.switch span:hover {
+    text-decoration: underline;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 768px) {
+
+    .glass-card {
+
+        width: 100%;
+
+        padding: 30px;
+
+    }
+
+    .login-title {
+
+        font-size: 28px;
+
+    }
+
+}
+
+.title {
+    color: white;
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.85);
+}
