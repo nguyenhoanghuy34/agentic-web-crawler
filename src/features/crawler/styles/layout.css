@@ -1,234 +1,98 @@
 /* =====================================================
-                    PAGE LAYOUT
+                    MAIN LAYOUT
 ===================================================== */
 
-.crawler-page {
+.crawler-main{
 
-    min-height: 100vh;
+    flex:1;
 
-    display: flex;
+    display:flex;
 
-    flex-direction: column;
+    gap:24px;
 
-    position: relative;
+    padding:20px;
 
-    overflow-x: hidden;
+    min-height:calc(100vh - 120px);
 
-    background:
-        linear-gradient(
-            180deg,
-            #040a1f 0%,
-            #08112d 100%
-        );
+    transition:all var(--transition);
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.crawler-main.expanded{
+
+    min-height:calc(100vh - 36px);
 
 }
 
 
 /* =====================================================
-                BACKGROUND EFFECT
+                    PANEL COMMON
 ===================================================== */
 
-.crawler-page::before {
+.panel-header{
 
-    content: "";
+    display:flex;
 
-    position: absolute;
+    justify-content:space-between;
 
-    width: 420px;
-    height: 420px;
+    align-items:center;
 
-    top: -120px;
-    left: -100px;
-
-    border-radius: 50%;
-
-    background: rgba(59,130,246,.12);
-
-    filter: blur(120px);
-
-    pointer-events: none;
-
-}
-
-.crawler-page::after {
-
-    content: "";
-
-    position: absolute;
-
-    width: 500px;
-    height: 500px;
-
-    right: -120px;
-    bottom: -180px;
-
-    border-radius: 50%;
-
-    background: rgba(255,255,255,.04);
-
-    filter: blur(140px);
-
-    pointer-events: none;
-
-}
-
-
-/* =====================================================
-                    MAIN CONTENT
-===================================================== */
-
-.crawler-main {
-
-    flex: 1;
-
-    display: flex;
-
-    gap: 24px;
-
-    padding: 20px;
-
-    min-height: calc(100vh - 120px);
-
-    position: relative;
-
-    z-index: 2;
-
-    transition:
-        min-height .35s ease,
-        padding .35s ease;
-
-}
-
-
-/* =====================================================
-            EXPANDED MODE
-===================================================== */
-
-.crawler-main.expanded {
-
-    min-height: calc(100vh - 36px);
-
-}
-
-
-/* =====================================================
-            CONTENT CONTAINER
-===================================================== */
-
-.crawler-content {
-
-    flex: 1;
-
-    position: relative;
-
-    z-index: 2;
-
-}
-
-
-/* =====================================================
-                SHARED PANEL STYLE
-===================================================== */
-
-.data-panel,
-.chat-panel {
-
-    display: flex;
-
-    flex-direction: column;
-
-    height: 100%;
-
-    border-radius: 24px;
-
-    background: var(--glass-bg);
-
-    backdrop-filter: blur(18px);
-
-    -webkit-backdrop-filter: blur(18px);
-
-    border: 1px solid var(--glass-border);
-
-    box-shadow:
-        0 10px 35px rgba(0,0,0,.22);
-
-    overflow: hidden;
-
-    transition:
-        transform .25s ease,
-        box-shadow .25s ease;
-
-}
-
-.data-panel:hover,
-.chat-panel:hover {
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 18px 45px rgba(0,0,0,.28);
-
-}
-
-
-/* =====================================================
-                    PANEL HEADER
-===================================================== */
-
-.panel-header {
-
-    padding: 22px 28px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
+    padding:20px 24px;
 
     border-bottom:
-        1px solid rgba(255,255,255,.12);
+
+        1px solid rgba(255,255,255,.08);
 
 }
 
+.panel-header h2{
 
-/* =====================================================
-                    PANEL BODY
-===================================================== */
+    color:var(--text-primary);
 
-.panel-body {
+    font-size:20px;
 
-    flex: 1;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    align-items: center;
-
-    text-align: center;
-
-    padding: 40px;
+    font-weight:600;
 
 }
 
-.panel-body h3 {
+.panel-body{
 
-    color: white;
+    flex:1;
 
-    font-size: 30px;
+    display:flex;
 
-    margin-bottom: 16px;
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
 
 }
 
-.panel-body p {
+.panel-body h3{
 
-    color: var(--text-secondary);
+    color:var(--text-primary);
 
-    line-height: 1.7;
+    font-size:28px;
 
-    max-width: 480px;
+    margin-bottom:18px;
+
+}
+
+.panel-body p{
+
+    color:var(--text-secondary);
+
+    line-height:1.8;
+
+    max-width:460px;
 
 }

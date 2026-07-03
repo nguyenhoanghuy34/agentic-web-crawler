@@ -1,0 +1,253 @@
+/* =====================================================
+                    LARGE DESKTOP
+===================================================== */
+
+@media (max-width: 1400px){
+
+    .crawler-main{
+
+        gap:20px;
+
+        padding:18px;
+
+    }
+
+}
+
+
+/* =====================================================
+                    LAPTOP
+===================================================== */
+
+@media (max-width:1200px){
+
+    .crawler-main{
+
+        flex-direction:column;
+
+    }
+
+    .data-panel{
+
+        flex:none;
+
+        min-height:550px;
+
+    }
+
+    .chat-panel{
+
+        flex:none;
+
+        min-height:420px;
+
+    }
+
+}
+
+
+/* =====================================================
+                    TABLET
+===================================================== */
+
+@media (max-width:992px){
+
+    .crawler-navbar-content{
+
+        flex-wrap:wrap;
+
+        gap:18px;
+
+        justify-content:center;
+
+    }
+
+    .crawler-nav{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .crawler-footer{
+
+        grid-template-columns:1fr;
+
+        gap:30px;
+
+    }
+
+    .footer-bottom{
+
+        flex-direction:column;
+
+        gap:12px;
+
+        text-align:center;
+
+    }
+
+}
+
+
+/* =====================================================
+                    MOBILE
+===================================================== */
+
+@media (max-width:768px){
+
+    .crawler-navbar{
+
+        margin:10px;
+
+    }
+
+    .crawler-navbar-content{
+
+        padding:16px;
+
+        flex-direction:column;
+
+    }
+
+    .crawler-logo{
+
+        font-size:22px;
+
+    }
+
+    .crawler-nav{
+
+        width:100%;
+
+        justify-content:center;
+
+        gap:8px;
+
+    }
+
+    .crawler-nav-item{
+
+        padding:8px 12px;
+
+        font-size:14px;
+
+    }
+
+    .crawler-avatar{
+
+        width:40px;
+
+        height:40px;
+
+        font-size:15px;
+
+    }
+
+    .crawler-main{
+
+        padding:10px;
+
+        gap:16px;
+
+    }
+
+    .panel-header{
+
+        padding:16px;
+
+    }
+
+    .panel-body{
+
+        padding:24px;
+
+    }
+
+    .panel-body h3{
+
+        font-size:22px;
+
+    }
+
+    .panel-body p{
+
+        font-size:14px;
+
+    }
+
+    .crawler-footer{
+
+        margin:10px;
+
+        padding:24px;
+
+    }
+
+}
+
+
+/* =====================================================
+                    SMALL MOBILE
+===================================================== */
+
+@media (max-width:480px){
+
+    .crawler-logo{
+
+        font-size:20px;
+
+    }
+
+    .crawler-nav{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .crawler-nav-item{
+
+        width:100%;
+
+    }
+
+    .model-toggle{
+
+        flex-direction:column;
+
+    }
+
+    .model-btn{
+
+        width:100%;
+
+    }
+
+    .chat-input-wrapper{
+
+        flex-direction:column;
+
+    }
+
+    .chat-input input{
+
+        width:100%;
+
+    }
+
+    .send-btn{
+
+        width:100%;
+
+    }
+
+    .panel-body{
+
+        padding:18px;
+
+    }
+
+}

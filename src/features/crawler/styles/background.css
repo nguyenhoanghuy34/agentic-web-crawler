@@ -1,3 +1,7 @@
+/* =====================================================
+                    PAGE
+===================================================== */
+
 .crawler-page{
 
     min-height:100vh;
@@ -7,13 +11,23 @@
     flex-direction:column;
 
     background:
+
         linear-gradient(
             180deg,
             #040a1f 0%,
             #08112d 100%
         );
 
+    position:relative;
+
+    overflow:hidden;
+
 }
+
+
+/* =====================================================
+                BACKGROUND EFFECT
+===================================================== */
 
 .crawler-page::before{
 
@@ -21,15 +35,19 @@
 
     position:absolute;
 
-    width:420px;
-    height:420px;
+    width:450px;
+
+    height:450px;
 
     border-radius:50%;
 
-    background:rgba(59,130,246,.25);
+    background:
+
+        rgba(59,130,246,.18);
+
+    left:-120px;
 
     top:-120px;
-    left:-100px;
 
     filter:blur(120px);
 
@@ -41,16 +59,20 @@
 
     position:absolute;
 
-    width:500px;
-    height:500px;
+    width:550px;
+
+    height:550px;
 
     border-radius:50%;
 
-    background:rgba(255,255,255,.08);
+    background:
 
-    right:-120px;
-    bottom:-180px;
+        rgba(255,255,255,.04);
 
-    filter:blur(140px);
+    right:-150px;
+
+    bottom:-200px;
+
+    filter:blur(150px);
 
 }

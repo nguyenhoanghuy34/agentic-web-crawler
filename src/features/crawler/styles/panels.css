@@ -1,0 +1,105 @@
+/* =====================================================
+                    DATA PANEL
+===================================================== */
+
+.data-panel{
+
+    flex:7;
+
+    display:flex;
+
+    flex-direction:column;
+
+    border-radius:var(--radius);
+
+    background:var(--glass-bg);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid var(--glass-border);
+
+    box-shadow:var(--shadow);
+
+    overflow:hidden;
+
+    transition:all var(--transition);
+
+}
+
+.data-panel:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+/* =====================================================
+                    CHAT PANEL
+===================================================== */
+
+.chat-panel{
+
+    flex:3;
+
+    display:flex;
+
+    flex-direction:column;
+
+    border-radius:var(--radius);
+
+    background:var(--glass-bg);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid var(--glass-border);
+
+    box-shadow:var(--shadow);
+
+    overflow:hidden;
+
+    transition:all var(--transition);
+
+}
+
+.chat-panel:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+/* =====================================================
+                    SCROLLBAR
+===================================================== */
+
+.data-panel::-webkit-scrollbar,
+
+.chat-panel::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.data-panel::-webkit-scrollbar-thumb,
+
+.chat-panel::-webkit-scrollbar-thumb{
+
+    background:
+
+        rgba(255,255,255,.22);
+
+    border-radius:20px;
+
+}
+
+.data-panel::-webkit-scrollbar-track,
+
+.chat-panel::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
