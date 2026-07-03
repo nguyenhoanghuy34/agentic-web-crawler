@@ -31,13 +31,7 @@
 
     flex-direction:column;
 
-    background:
-        linear-gradient(
-            135deg,
-            #0f172a 0%,
-            #1e293b 45%,
-            #2563eb 100%
-        );
+    background:#040a1f;
 
 }
 
