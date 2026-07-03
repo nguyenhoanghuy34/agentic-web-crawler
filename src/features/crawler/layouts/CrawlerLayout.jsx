@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import "../crawler.css";
 
 import Navbar from "../components/Navbar";
@@ -7,12 +9,25 @@ import DataPanel from "../components/DataPanel";
 import ChatPanel from "../components/ChatPanel";
 
 export default function CrawlerLayout() {
+
+    const [collapsed, setCollapsed] = useState(false);
+
     return (
+
         <div className="crawler-page">
 
-            <Navbar />
+            <Navbar
+                collapsed={collapsed}
+                setCollapsed={setCollapsed}
+            />
 
-            <main className="crawler-main">
+            <main
+                className={
+                    collapsed
+                        ? "crawler-main expanded"
+                        : "crawler-main"
+                }
+            >
 
                 <DataPanel />
 
@@ -23,5 +38,7 @@ export default function CrawlerLayout() {
             <Footer />
 
         </div>
+
     );
+
 }

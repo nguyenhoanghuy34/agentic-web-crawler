@@ -1,4 +1,8 @@
-export default function Navbar() {
+export default function Navbar({
+    collapsed,
+    setCollapsed
+}) {
+
     const navItems = [
         "Dashboard",
         "Crawler",
@@ -7,31 +11,61 @@ export default function Navbar() {
     ];
 
     return (
-        <header className="crawler-navbar">
 
-            <div className="crawler-logo">
-                CrawlAI
-            </div>
+        <header
+            className={
+                collapsed
+                    ? "crawler-navbar collapsed"
+                    : "crawler-navbar"
+            }
+        >
 
-            <nav className="crawler-nav">
-                {navItems.map((item) => (
-                    <button
-                        key={item}
-                        className="crawler-nav-item"
-                    >
-                        {item}
-                    </button>
-                ))}
-            </nav>
+            <div className="crawler-navbar-content">
 
-            <div className="crawler-user">
+                <div className="crawler-logo">
 
-                <div className="crawler-avatar">
-                    HH
+                    CrawlAI
+
+                </div>
+
+                <nav className="crawler-nav">
+
+                    {navItems.map(item => (
+
+                        <button
+                            key={item}
+                            className="crawler-nav-item"
+                        >
+                            {item}
+                        </button>
+
+                    ))}
+
+                </nav>
+
+                <div className="crawler-user">
+
+                    <div className="crawler-avatar">
+
+                        HH
+
+                    </div>
+
                 </div>
 
             </div>
 
+            <div
+                className="navbar-toggle"
+                onClick={() => setCollapsed(!collapsed)}
+            >
+
+                {collapsed ? "▼" : "▲"}
+
+            </div>
+
         </header>
+
     );
+
 }
