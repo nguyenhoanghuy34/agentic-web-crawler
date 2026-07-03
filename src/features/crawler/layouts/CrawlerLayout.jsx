@@ -12,19 +12,15 @@ export default function CrawlerLayout() {
 
             <Navbar />
 
-            <div className="crawler-layout">
+            <main className="crawler-main">
 
-                <main className="crawler-main">
+                <DataPanel />
 
-                    <DataPanel />
+                <ChatPanel />
 
-                    <ChatPanel />
+            </main>
 
-                </main>
-
-                <Footer />
-
-            </div>
+            <Footer />
 
         </div>
     );
