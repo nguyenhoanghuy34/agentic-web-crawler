@@ -1,0 +1,242 @@
+/* =====================================================
+                        NAVBAR
+===================================================== */
+
+.crawler-navbar {
+
+    margin: 12px 20px 0;
+
+    background: #040a1f;
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    z-index: 20;
+
+    transition:
+        transform .35s ease,
+        margin-bottom .35s ease,
+        box-shadow .25s ease;
+
+    box-shadow:
+        0 8px 28px rgba(0,0,0,.18);
+
+}
+
+
+/* =====================================================
+                COLLAPSED NAVBAR
+===================================================== */
+
+.crawler-navbar.collapsed {
+
+    transform: translateY(calc(-100% + 24px));
+
+    margin-bottom: -78px;
+
+}
+
+
+/* =====================================================
+                    NAVBAR CONTENT
+===================================================== */
+
+.crawler-navbar-content {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 12px 28px;
+
+}
+
+
+/* =====================================================
+                        LOGO
+===================================================== */
+
+.crawler-logo {
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    color: white;
+
+    letter-spacing: .5px;
+
+    user-select: none;
+
+}
+
+
+/* =====================================================
+                    NAVIGATION
+===================================================== */
+
+.crawler-nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+.crawler-nav-item {
+
+    padding: 8px 16px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: rgba(255,255,255,.82);
+
+    cursor: pointer;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        transform .2s ease;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+}
+
+.crawler-nav-item:hover {
+
+    background: rgba(255,255,255,.08);
+
+    color: white;
+
+}
+
+.crawler-nav-item:active {
+
+    transform: scale(.97);
+
+}
+
+.crawler-nav-item.active {
+
+    background: rgba(59,130,246,.20);
+
+    color: white;
+
+}
+
+
+/* =====================================================
+                    USER AREA
+===================================================== */
+
+.crawler-user {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+}
+
+.crawler-avatar {
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #3b82f6,
+            #2563eb
+        );
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: white;
+
+    font-weight: 600;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+.crawler-avatar:hover {
+
+    transform: scale(1.06);
+
+    box-shadow:
+        0 0 18px rgba(59,130,246,.45);
+
+}
+
+
+/* =====================================================
+                    TOGGLE BUTTON
+===================================================== */
+
+.navbar-toggle {
+
+    height: 24px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    cursor: pointer;
+
+    color: rgba(255,255,255,.88);
+
+    background: #040a1f;
+
+    border-top: 1px solid rgba(255,255,255,.08);
+
+    user-select: none;
+
+    transition:
+        background .25s ease,
+        color .25s ease;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+}
+
+.navbar-toggle:hover {
+
+    background: rgba(255,255,255,.08);
+
+    color: white;
+
+}

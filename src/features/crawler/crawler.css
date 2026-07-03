@@ -792,3 +792,55 @@
     }
 
 }
+
+/* ===========================
+        MODEL TOGGLE
+=========================== */
+
+.model-toggle{
+
+    display:flex;
+
+    width:100%;
+
+    background:rgba(255,255,255,.05);
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+}
+
+.model-btn{
+
+    flex:1;
+
+    border:none;
+
+    background:transparent;
+
+    color:white;
+
+    padding:12px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    font-size:14px;
+
+}
+
+.model-btn:hover{
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.model-btn.active{
+
+    background:#3b82f6;
+
+    font-weight:600;
+
+}

@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 export default function ChatPanel() {
+
+    const [model, setModel] = useState("gemini");
 
     return (
 
@@ -6,7 +10,31 @@ export default function ChatPanel() {
 
             <div className="panel-header">
 
-                <h2>AI Assistant</h2>
+                <div className="model-toggle">
+
+                    <button
+                        className={
+                            model === "gemini"
+                                ? "model-btn active"
+                                : "model-btn"
+                        }
+                        onClick={() => setModel("gemini")}
+                    >
+                        Gemini Model
+                    </button>
+
+                    <button
+                        className={
+                            model === "openai"
+                                ? "model-btn active"
+                                : "model-btn"
+                        }
+                        onClick={() => setModel("openai")}
+                    >
+                        OpenAI Model
+                    </button>
+
+                </div>
 
             </div>
 
@@ -16,8 +44,17 @@ export default function ChatPanel() {
 
                 <p>
 
-                    Sau này sẽ kết nối với AI Model
-                    để điều khiển crawler.
+                    Model hiện tại:
+
+                    <br /><br />
+
+                    <strong>
+
+                        {model === "gemini"
+                            ? "Gemini Model"
+                            : "OpenAI Model"}
+
+                    </strong>
 
                 </p>
 

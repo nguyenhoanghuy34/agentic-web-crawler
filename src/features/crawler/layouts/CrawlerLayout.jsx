@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import "../crawler.css";
+import "../styles/index.css";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";

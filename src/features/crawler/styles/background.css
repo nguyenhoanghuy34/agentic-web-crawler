@@ -1,0 +1,56 @@
+.crawler-page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:
+        linear-gradient(
+            180deg,
+            #040a1f 0%,
+            #08112d 100%
+        );
+
+}
+
+.crawler-page::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+    height:420px;
+
+    border-radius:50%;
+
+    background:rgba(59,130,246,.25);
+
+    top:-120px;
+    left:-100px;
+
+    filter:blur(120px);
+
+}
+
+.crawler-page::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    right:-120px;
+    bottom:-180px;
+
+    filter:blur(140px);
+
+}
