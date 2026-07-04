@@ -20,3 +20,15 @@ async def crawl(req: CrawlRequest):
         "status": "running"
 
     }
+
+@router.post("/users")
+async def create_user(email: str, password: str, db: AsyncSession = Depends(get_db)):
+
+    user = User(email=email, password=password)
+
+    db.add(user)
+
+    await db.commit()
+
+    return {"status": "created"}
+

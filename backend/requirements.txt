@@ -17,3 +17,7 @@ langchain-openai
 pydantic
 
 tiktoken
+
+sqlalchemy
+asyncpg
+alembic
