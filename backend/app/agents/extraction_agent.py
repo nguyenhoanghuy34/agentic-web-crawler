@@ -1,15 +1,26 @@
+import json
+
+from app.llm.client import ask_llm
+from app.llm.prompts import EXTRACTION_SYSTEM_PROMPT
+
+
 class ExtractionAgent:
 
-    def process(self, raw_data, user_prompt: str):
-        results = []
+    def process(self, raw_data, user_prompt):
 
-        for item in raw_data:
-            results.append({
-                "name": item.get("title"),
-                "price": item.get("price"),
-                "website": item.get("url"),
-                "description": item.get("description"),
-                "category": "unknown"
-            })
+        prompt = f"""
+User Request:
 
-        return {"results": results}
+{user_prompt}
+
+Scraped Data:
+
+{raw_data}
+"""
+
+        response = ask_llm(
+            EXTRACTION_SYSTEM_PROMPT,
+            prompt
+        )
+
+        return json.loads(response)
