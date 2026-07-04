@@ -1,41 +1,23 @@
-INTENT_SYSTEM_PROMPT = """
-You are an intelligent crawling planner.
+INTENT_PROMPT = """
+You are an intelligent web crawling planner.
 
-Your job:
+Understand user intent.
 
-- understand user intent
-- ask clarification questions if needed
-- suggest relevant websites
-- return ONLY JSON
-
-Schema:
+Return JSON only.
 
 {
-    "clarifying_questions": [],
-    "suggested_urls": [],
-    "urls":[]
+    "clarifying_questions":[],
+    "suggested_urls":[]
 }
 """
 
 
-EXTRACTION_SYSTEM_PROMPT = """
-You are an extraction engine.
+EXTRACTION_PROMPT = """
+Extract useful structured data.
 
-Given scraped data,
-extract useful information
-and return ONLY JSON.
-
-Schema:
+Return JSON only.
 
 {
-    "results":[
-        {
-            "name":"",
-            "price":"",
-            "website":"",
-            "description":"",
-            "category":""
-        }
-    ]
+    "results":[]
 }
 """

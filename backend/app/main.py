@@ -1,6 +1,9 @@
 from fastapi import FastAPI
+
 from app.api.routes import router
 
-app = FastAPI(title="Crawler Backend System")
+app = FastAPI(
+    title="Agentic Web Crawler"
+)
 
-app.include_router(router, prefix="/api")
+app.include_router(router)

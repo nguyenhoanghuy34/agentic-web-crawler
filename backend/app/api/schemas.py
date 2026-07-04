@@ -1,13 +1,18 @@
 from pydantic import BaseModel
-from typing import List, Optional
+from typing import List
 
 
 class CrawlRequest(BaseModel):
-    mode: str  # "intent" or "urls"
-    intent: Optional[str] = None
-    urls: Optional[List[str]] = None
+
+    mode: str
+
+    intent: str | None = None
+
+    urls: List[str] | None = None
 
 
 class CrawlResponse(BaseModel):
+
     job_id: str
+
     status: str

@@ -1,20 +1,26 @@
-import asyncio
+from scrapy.crawler import CrawlerProcess
+from scrapy.utils.project import get_project_settings
+
+from app.crawler.spiders.generic_spider import GenericSpider
 
 
-class ScrapyRunner:
+def run_crawler(urls: list):
 
-    async def run(self, urls, config):
-        # MOCK scrapy run (sau này thay bằng scrapy crawl)
-        results = []
+    settings = get_project_settings()
 
-        for url in urls:
-            await asyncio.sleep(config["crawl_config"]["delay"])
+    process = CrawlerProcess(settings)
 
-            results.append({
-                "url": url,
-                "title": f"Fake data from {url}",
-                "price": "100$",
-                "description": "mock scraped content"
-            })
+    collected_data = []
 
-        return results
+    def collect(item):
+        collected_data.append(item)
+
+    process.crawl(GenericSpider, urls=urls)
+
+    for spider in process.crawlers:
+
+        spider.signals.connect(collect, signal="item_scraped")
+
+    process.start()
+
+    return collected_data
